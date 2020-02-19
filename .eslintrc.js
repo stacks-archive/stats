@@ -2,9 +2,9 @@ module.exports = {
   extends: [
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
-    'plugin:react/recommended',
+    // 'plugin:react/recommended',
     'prettier/@typescript-eslint',
-    'plugin:jest/recommended',
+    // 'plugin:jest/recommended',
     'plugin:prettier/recommended'
     // 'plugin:jsx-a11y/recommended'
   ],
@@ -15,12 +15,11 @@ module.exports = {
     project: './tsconfig.json',
     tsconfigRootDir: __dirname,
   },
-  plugins: ['@typescript-eslint', 'react', 'jest'],
+  plugins: ['@typescript-eslint'],
   env: {
     browser: true,
     node: true,
     es6: true,
-    'jest/globals': true,
   },
   globals: {
     page: true,
@@ -66,8 +65,8 @@ module.exports = {
     '@typescript-eslint/camelcase': 'off',
     '@typescript-eslint/no-use-before-define': 'off',
     '@typescript-eslint/interface-name-prefix': [2],
-    'react/jsx-uses-vars': [2],
-    'react/jsx-key': [0],
-    'react/prop-types': [0],
+    // 'react/jsx-uses-vars': [2],
+    // 'react/jsx-key': [0],
+    // 'react/prop-types': [0],
   },
 };

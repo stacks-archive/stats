@@ -1,6 +1,7 @@
 {
   "name": "root",
   "private": true,
+  "prettier": "@blockstack/prettier-config",
   "devDependencies": {
     "@blockstack/prettier-config": "^0.0.5",
     "@typescript-eslint/eslint-plugin": "^2.20.0",
