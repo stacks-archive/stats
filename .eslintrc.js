@@ -4,7 +4,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
     // 'plugin:react/recommended',
     'prettier/@typescript-eslint',
-    // 'plugin:jest/recommended',
+    'plugin:jest/recommended',
     'plugin:prettier/recommended'
     // 'plugin:jsx-a11y/recommended'
   ],
@@ -20,6 +20,7 @@ module.exports = {
     browser: true,
     node: true,
     es6: true,
+    'jest/globals': true,
   },
   globals: {
     page: true,
