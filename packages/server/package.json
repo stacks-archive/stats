@@ -1,0 +1,33 @@
+{
+  "name": "@blockstack/analytics-server",
+  "version": "0.0.1",
+  "description": "A client-side library for privacy-preserving analytics",
+  "author": "Hank Stoever <hstove@gmail.com>",
+  "homepage": "",
+  "license": "MIT",
+  "main": "dist/server.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.yarnpkg.com"
+  },
+  "scripts": {
+    "dev": "next",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "next": "^9.2.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "devDependencies": {
+    "@types/node": "^13.7.4",
+    "@types/react": "^16.9.20",
+    "typescript": "^3.7.5"
+  }
+}
