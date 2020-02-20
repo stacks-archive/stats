@@ -1,8 +1,8 @@
-import { BaseAdapter } from './base';
+import { BaseProvider } from './base';
 import Segment from 'analytics-node';
 import { EventData } from '../types';
 
-export class SegmentAdapter extends BaseAdapter {
+export class SegmentProvider extends BaseProvider {
   static isEnabled() {
     return !!process.env.SEGMENT_WRITE_KEY;
   }

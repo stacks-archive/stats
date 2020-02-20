@@ -1,6 +1,6 @@
 import { EventData, PageData, Actions, RunOptions } from '../types';
 
-export class BaseAdapter {
+export class BaseProvider {
   static async run({ action, pageData, eventData }: RunOptions) {
     if (!this.isEnabled()) {
       console.log(`${this.name}: not enabled.`);
