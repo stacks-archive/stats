@@ -11,8 +11,10 @@
     "module": "commonjs",
     "forceConsistentCasingInFileNames": true,
     "noEmit": false,
+    "outDir": "dist",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "declaration": true
   }
 }

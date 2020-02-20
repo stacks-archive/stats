@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import express, { Request, Response } from 'express';
 import { RunOptions } from '@blockstack/analytics';
 import bodyParser from 'body-parser';
