@@ -1,13 +1,14 @@
 import { BaseProvider } from './providers/base';
 import { SegmentProvider } from './providers/segment';
-import { RunOptions, Providers } from './types';
+import { RunOptions, Providers } from '@blockstack/analytics';
 
 const nameToProvider = {
   [Providers.Segment]: SegmentProvider,
 };
 
 export const exportToProviders = async (opts: RunOptions) => {
-  const providers: (typeof BaseProvider | undefined)[] = opts.providers.map(provider => nameToProvider[provider.name]);
-  const runs = providers.map(async provider => await provider?.run(opts));
+  const providersConfig = opts.providers || [];
+  const providers: (typeof BaseProvider | undefined)[] = providersConfig.map(provider => nameToProvider[provider.name]);
+  const runs = providers.map(async (provider, index) => await provider?.run(opts, providersConfig[index]));
   await Promise.all(runs);
 };

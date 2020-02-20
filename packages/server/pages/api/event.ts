@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { RunOptions } from '../../lib/types';
+import { RunOptions } from '@blockstack/analytics';
 import { exportToProviders } from '../../lib/utils';
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
@@ -9,7 +9,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     await exportToProviders(runOptions);
   } catch (error) {
     console.log(error);
-    res.status(500).json({
+    return res.status(500).json({
       success: false,
     });
   }

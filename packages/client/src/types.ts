@@ -9,9 +9,18 @@ export interface SegmentConfig {
 
 export type Provider = SegmentConfig;
 
+export interface ActionData {
+  id: string;
+  provider: Provider;
+}
+
 export interface EventData {
   name: string;
   [key: string]: any;
+}
+
+export interface EventAction extends ActionData {
+  eventData: EventData;
 }
 
 export interface PageData {
@@ -20,6 +29,10 @@ export interface PageData {
   href?: string;
   url?: string;
   [key: string]: any;
+}
+
+export interface PageAction extends ActionData {
+  pageData: PageData;
 }
 
 export enum Actions {
@@ -32,4 +45,5 @@ export interface RunOptions {
   pageData?: PageData;
   eventData?: EventData;
   providers: Provider[];
+  id: string;
 }

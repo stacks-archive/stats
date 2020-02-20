@@ -1,22 +1,20 @@
 import { BaseProvider } from './base';
 import Segment from 'analytics-node';
-import { EventData } from '../types';
+import { SegmentConfig, EventAction } from '@blockstack/analytics';
 
 export class SegmentProvider extends BaseProvider {
-  static isEnabled() {
-    return !!process.env.SEGMENT_WRITE_KEY;
-  }
-
-  static async event(eventData: EventData) {
-    const client = this.getClient();
+  static async event(eventAction: EventAction) {
+    const client = this.getClient(eventAction.provider);
+    const { eventData } = eventAction;
     client.track({
-      event: eventData.name,
+      event: eventAction.eventData.name,
+      anonymousId: eventAction.id,
       ...eventData,
     });
     return Promise.resolve();
   }
 
-  static getClient() {
-    return new Segment(process.env.SEGMENT_WRITE_KEY || '');
+  static getClient(provider: SegmentConfig) {
+    return new Segment(provider.writeKey || '');
   }
 }
