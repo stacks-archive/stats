@@ -1,10 +1,7 @@
 import { getConfig } from './config';
+import { EventData } from '../../server/lib/types';
 
-interface EventProperties {
-  [key: string]: any;
-}
-
-export const event = async (name: string, properties: EventProperties = {}) => {
+export const event = async (eventData: EventData) => {
   const { host } = getConfig();
   await fetch(`${host}/api/event`, {
     method: 'POST',
@@ -12,8 +9,7 @@ export const event = async (name: string, properties: EventProperties = {}) => {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      name,
-      properties,
+      ...eventData,
     }),
   });
 };

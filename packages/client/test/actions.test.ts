@@ -4,7 +4,7 @@ import { event, setConfig } from '../src';
 describe('event', () => {
   test('passes the right JSON to the server', async () => {
     fetchMock.once('');
-    await event('test');
+    await event({ name: 'test' });
     const [url, extra] = fetchMock.mock.calls[0];
     expect(url).toEqual('http://localhost:5555/api/event');
     expect(extra).toBeTruthy();
@@ -15,7 +15,6 @@ describe('event', () => {
     const body = JSON.parse(extra.body.toString());
     expect(body).toEqual({
       name: 'test',
-      properties: {},
     });
   });
 
@@ -24,7 +23,7 @@ describe('event', () => {
       host: 'https://analytics.example.com',
     });
     fetchMock.once('');
-    await event('ran_test');
+    await event({ name: 'ran_test' });
     const [url] = fetchMock.mock.calls[0];
     expect(url).toEqual('https://analytics.example.com/api/event');
   });
