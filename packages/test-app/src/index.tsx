@@ -4,6 +4,16 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { ThemeProvider, theme, CSSReset } from '@blockstack/ui';
+import { setConfig, Providers } from '@blockstack/analytics';
+
+setConfig({
+  providers: [
+    {
+      name: Providers.Segment,
+      writeKey: 'asdf',
+    }
+  ]
+})
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>

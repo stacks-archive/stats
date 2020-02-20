@@ -17,11 +17,12 @@
     "registry": "https://registry.yarnpkg.com"
   },
   "scripts": {
-    "dev": "next -p 5555",
+    "start": "next -p 5555",
     "typecheck": "tsc --noEmit",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
+    "@blockstack/analytics": "file:../client",
     "analytics-node": "^3.4.0-beta.1",
     "next": "^9.2.2",
     "react": "^16.12.0",

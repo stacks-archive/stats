@@ -3,7 +3,8 @@
   "private": true,
   "prettier": "@blockstack/prettier-config",
   "scripts": {
-    "typecheck": "lerna run typecheck"
+    "typecheck": "lerna run typecheck",
+    "dev": "lerna run start --parallel --stream"
   },
   "devDependencies": {
     "@blockstack/prettier-config": "^0.0.5",
