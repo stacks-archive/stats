@@ -20,6 +20,7 @@
   },
   "scripts": {
     "start": "PORT=3333 react-scripts start",
+    "dev:watch": "yarn start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "typecheck": "tsc --noEmit",

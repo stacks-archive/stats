@@ -8,6 +8,7 @@
   ],
   "scripts": {
     "start": "tsdx watch",
+    "dev:watch": "tsdx watch --verbose --noClean",
     "build": "tsdx build",
     "test": "tsdx test",
     "lint": "tsdx lint",

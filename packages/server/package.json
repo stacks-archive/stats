@@ -6,13 +6,12 @@
   "homepage": "",
   "license": "MIT",
   "main": "dist/server.js",
-  "directories": {
-    "lib": "lib",
-    "test": "__tests__"
-  },
   "files": [
-    "lib"
+    "dist"
   ],
+  "bin": {
+    "blockstack-analytics-server": "./dist/http.js"
+  },
   "publishConfig": {
     "registry": "https://registry.yarnpkg.com"
   },

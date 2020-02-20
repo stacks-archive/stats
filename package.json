@@ -4,7 +4,8 @@
   "prettier": "@blockstack/prettier-config",
   "scripts": {
     "typecheck": "lerna run typecheck",
-    "dev": "lerna run start --parallel --stream"
+    "dev:watch": "lerna run dev:watch --parallel --stream",
+    "build:client": "lerna run build --scope @blockstack/analytics"
   },
   "devDependencies": {
     "@blockstack/prettier-config": "^0.0.5",
