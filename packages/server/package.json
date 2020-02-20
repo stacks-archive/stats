@@ -17,7 +17,8 @@
     "registry": "https://registry.yarnpkg.com"
   },
   "scripts": {
-    "dev": "next",
+    "dev": "next -p 5555",
+    "typecheck": "tsc --noEmit",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {

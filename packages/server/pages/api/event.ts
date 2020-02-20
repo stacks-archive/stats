@@ -1,16 +1,12 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-// import SegmentAnalytics from 'analytics-node';
-import { EventData } from '../../lib/types';
-import { Actions } from '../../lib/adapters/base';
+import { RunOptions } from '../../lib/types';
 import { runWithAdapters } from '../../lib/utils';
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
-  const eventData: EventData = req.body;
+  const runOptions: RunOptions = req.body;
+  console.log(runOptions);
   try {
-    await runWithAdapters({
-      eventData,
-      action: Actions.EVENT,
-    });
+    await runWithAdapters(runOptions);
   } catch (error) {
     console.log(error);
     res.status(500).json({

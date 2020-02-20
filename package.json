@@ -2,6 +2,9 @@
   "name": "root",
   "private": true,
   "prettier": "@blockstack/prettier-config",
+  "scripts": {
+    "typecheck": "lerna run typecheck"
+  },
   "devDependencies": {
     "@blockstack/prettier-config": "^0.0.5",
     "@types/jest": "^25.1.3",

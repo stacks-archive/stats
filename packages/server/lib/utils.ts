@@ -1,6 +1,13 @@
-import { RunOptions } from './adapters/base';
+import { BaseAdapter } from './adapters/base';
 import { SegmentAdapter } from './adapters/segment';
+import { RunOptions, Providers } from './types';
+
+const nameToAdapter = {
+  [Providers.Segment]: SegmentAdapter,
+};
 
 export const runWithAdapters = async (opts: RunOptions) => {
-  await Promise.all([SegmentAdapter.run(opts)]);
+  const adapters: (typeof BaseAdapter | undefined)[] = opts.providers.map(provider => nameToAdapter[provider.name]);
+  const runs = adapters.map(async adapter => await adapter?.run(opts));
+  await Promise.all(runs);
 };
