@@ -1,12 +1,14 @@
 import express, { Request, Response } from 'express';
 import { RunOptions } from '@blockstack/analytics';
 import bodyParser from 'body-parser';
+import cors from 'cors';
 import { exportToProviders } from './utils';
 
 const app = express();
 app.use(bodyParser.json());
+app.use(cors());
 
-app.get('/api/event', async (req: Request, res: Response) => {
+app.post('/api/event', async (req: Request, res: Response) => {
   const runOptions: RunOptions = req.body;
   console.log(runOptions);
   try {
