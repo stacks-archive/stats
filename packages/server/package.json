@@ -18,8 +18,7 @@
   "scripts": {
     "dev": "ts-node src/http.ts",
     "dev:watch": "nodemon -e ts -x 'yarn dev'",
-    "typecheck": "tsc --noEmit",
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@blockstack/analytics": "file:../client",

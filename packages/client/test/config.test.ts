@@ -1,7 +1,8 @@
 import { getConfig, setConfig, defaultConfig } from '../src';
 
 test('can get default config', () => {
-  const config = getConfig();
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { id, ...config } = getConfig();
   expect(config).toEqual(defaultConfig);
 });
 
@@ -10,7 +11,8 @@ test('can set config', () => {
     host: 'asdf',
   };
   setConfig(newConfig);
-  const config = getConfig();
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { id, ...config } = getConfig();
   expect(config).toEqual({
     ...defaultConfig,
     host: 'asdf',

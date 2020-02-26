@@ -1,5 +1,5 @@
 import './setup';
-import { event, setConfig } from '../src';
+import { event, setConfig, getConfig } from '../src';
 
 describe('event', () => {
   test('passes the right JSON to the server', async () => {
@@ -12,9 +12,15 @@ describe('event', () => {
       throw 'Invalid request made.';
     }
     expect(extra.method).toEqual('POST');
+    const { id } = getConfig();
     const body = JSON.parse(extra.body.toString());
     expect(body).toEqual({
-      name: 'test',
+      eventData: {
+        name: 'test',
+      },
+      action: 'event',
+      providers: [],
+      id,
     });
   });
 
