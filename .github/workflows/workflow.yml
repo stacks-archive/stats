@@ -67,6 +67,8 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
+    - name: Lerna Version
+      run: yarn lerna version --conventional-commits
     - name: Publish
       env:
         GITHUB_SECRET: ${{ secrets.GITHUB_SECRET }}
