@@ -1,10 +1,10 @@
 {
   "name": "test-app",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "dependencies": {
-    "@blockstack/ui": "^1.0.0-alpha.35",
     "@blockstack/analytics": "file:../client",
+    "@blockstack/ui": "^1.0.0-alpha.35",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",

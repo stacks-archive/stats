@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/client/src/index.d.ts",
@@ -15,7 +15,6 @@
     "typecheck": "tsc --noEmit",
     "prepublishOnly": "tsdx build"
   },
-  "peerDependencies": {},
   "husky": {
     "hooks": {
       "pre-commit": "tsdx lint"
