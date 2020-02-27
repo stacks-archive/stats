@@ -58,7 +58,7 @@ jobs:
     - name: Git status
       run: git status
     - name: Install package deps
-      run: yarn lerna exec yarn --parallel -- --frozen-lockfile
+      run: yarn lerna exec "yarn --frozen-lockfile"
     - name: Git status
       run: git status
     - name: Setup .npmrc
