@@ -60,4 +60,6 @@ jobs:
     - name: Setup .npmrc
       run: echo "//registry.npmjs.org/:_authToken={{ secrets.NPM_TOKEN }}" > .npmrc
     - name: Publish
-      run: yarn lerna publish from-git --conventional-commits --yes --git-remote https://{{ secrets.GITHUB_TOKEN }}@github.com/hstove/bsk-analytics
+      env:
+        GITHUB_SECRET: ${{ secrets.GITHUB_SECRET }}
+      run: yarn lerna publish from-git --conventional-commits --yes --git-remote https://${ secrets.GITHUB_TOKEN }@github.com/hstove/bsk-analytics
