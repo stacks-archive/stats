@@ -37,6 +37,8 @@ jobs:
       uses: actions/checkout@v1
       with:
         ref: 'master'
+    - name: Checkout master
+      run: git checkout master
     - name: Set Node Version
       uses: actions/setup-node@v1
       with:
@@ -58,4 +60,4 @@ jobs:
     - name: Setup .npmrc
       run: echo "//registry.npmjs.org/:_authToken={{ secrets.NPM_TOKEN }}" > .npmrc
     - name: Publish
-      run: yarn lerna publish
+      run: yarn lerna publish -- --yes --git-remote https://{{ GITHUB_TOKEN }}@github.com/hstove/bsk-analytics
