@@ -68,7 +68,7 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
     - name: Lerna Version
-      run: yarn lerna version --conventional-commits --no-push
+      run: yarn lerna version --conventional-commits --no-push --yes
     - name: Publish
       run: yarn lerna publish from-git --conventional-commits --yes
     - name: Push changes
