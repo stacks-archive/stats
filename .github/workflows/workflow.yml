@@ -62,4 +62,4 @@ jobs:
     - name: Publish
       env:
         GITHUB_SECRET: ${{ secrets.GITHUB_SECRET }}
-      run: yarn lerna publish from-git --conventional-commits --yes --git-remote https://${ secrets.GITHUB_TOKEN }@github.com/hstove/bsk-analytics
+      run: yarn lerna publish from-git --conventional-commits --yes --git-remote https://$GITHUB_SECRET@github.com/hstove/bsk-analytics
