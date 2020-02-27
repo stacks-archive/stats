@@ -13,7 +13,7 @@
     "blockstack-analytics-server": "./dist/http.js"
   },
   "publishConfig": {
-    "registry": "https://registry.yarnpkg.com"
+    "access": "public"
   },
   "scripts": {
     "dev": "ts-node src/http.ts",
@@ -34,8 +34,5 @@
     "@types/node": "^13.7.4",
     "ts-node": "^8.6.2",
     "typescript": "^3.7.5"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
+  }
 }
