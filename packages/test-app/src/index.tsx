@@ -11,9 +11,9 @@ setConfig({
     {
       name: Providers.Segment,
       writeKey: process.env.REACT_APP_SEGMENT_WRITE_KEY || '',
-    }
-  ]
-})
+    },
+  ],
+});
 
 console.log('Segment key configured as:', process.env.REACT_APP_SEGMENT_WRITE_KEY);
 
