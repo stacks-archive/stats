@@ -55,8 +55,12 @@ jobs:
           ${{ runner.os }}-yarn-
     - name: Install monorepo deps
       run: yarn
+    - name: Git status
+      run: git status
     - name: Install package deps
       run: yarn lerna bootstrap
+    - name: Git status
+      run: git status
     - name: Setup .npmrc
       run: echo "//registry.npmjs.org/:_authToken={{ secrets.NPM_TOKEN }}" > .npmrc
     - name: Setup git
