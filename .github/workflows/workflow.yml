@@ -68,8 +68,10 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
     - name: Lerna Version
-      run: yarn lerna version --conventional-commits
+      run: yarn lerna version --conventional-commits --no-push
     - name: Publish
-      env:
-        GITHUB_SECRET: ${{ secrets.GITHUB_SECRET }}
-      run: yarn lerna publish from-git --conventional-commits --yes --git-remote https://$GITHUB_SECRET@github.com/hstove/bsk-analytics
+      run: yarn lerna publish from-git --conventional-commits --yes
+    - name: Push changes
+      uses: ad-m/github-push-action@fe38f0a
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
