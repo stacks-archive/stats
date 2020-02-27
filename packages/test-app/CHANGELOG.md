@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](https://github.com/hstove/bsk-analytics/compare/v0.2.0...v0.2.1) (2020-02-27)
+
+
+### Bug Fixes
+
+* add eslint to CI, fix style errors ([28ae504](https://github.com/hstove/bsk-analytics/commit/28ae50430b3a97bcd1ae5b0f8ebeac1857bbb2b6))
+
+
+
+
+
 # 0.2.0 (2020-02-27)
 
 
