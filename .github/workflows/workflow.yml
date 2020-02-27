@@ -24,12 +24,41 @@ jobs:
     - name: Install monorepo deps
       run: yarn
     - name: Install package deps
-      run: yarn lerna bootstrap
+      run: yarn lerna exec --parallel "yarn --frozen-lockfile"
     - name: Run Tests
       run: yarn lerna run test
 
+  codecheck:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v1
+    - name: Set Node Version
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.16.1
+    - name: Get yarn cache directory path
+      id: yarn-cache-dir-path
+      run: echo "::set-output name=dir::$(yarn cache dir)"
+
+    - uses: actions/cache@v1
+      id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
+      with:
+        path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+        key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-yarn-
+    - name: Monorepo Dependencies
+      run: yarn --frozen-lockfile
+    - name: Install package deps
+      run: yarn lerna exec --parallel "yarn --frozen-lockfile"
+    - name: Lint
+      run: yarn lint
+    - name: Typecheck
+      run: yarn lerna run typecheck --parallel
+
   publish:
-    # needs: [test]
+    needs: [test, codecheck]
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master'
     steps:

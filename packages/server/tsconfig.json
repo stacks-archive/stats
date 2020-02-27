@@ -15,6 +15,10 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "esModuleInterop": true,
-    "declaration": true
+    "declaration": true,
+    "baseUrl": "./",
+    "paths": {
+      "@blockstack/analytics": ["../client/src"]
+    }
   }
 }
