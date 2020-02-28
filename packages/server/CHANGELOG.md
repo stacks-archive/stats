@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/blockstack/stats/compare/v0.4.0...v0.5.0) (2020-02-28)
+
+
+### Bug Fixes
+
+* rename for blockstack org ([e3237eb](https://github.com/blockstack/stats/commit/e3237ebcd818566f8e054ffe2d1fe1d8e99085fd))
+
+
+### Features
+
+* adds page context, page implementation ([881ef76](https://github.com/blockstack/stats/commit/881ef76162bf92ba20709fee4a36c705e8d8fd6b))
+
+
+
+
+
 # [0.4.0](https://github.com/blockstack/stats/compare/v0.3.0...v0.4.0) (2020-02-28)
 
 
