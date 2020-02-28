@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/hstove/bsk-analytics/compare/v0.2.1...v0.3.0) (2020-02-28)
+
+
+### Bug Fixes
+
+* lerna bootstrap before version ([e948c36](https://github.com/hstove/bsk-analytics/commit/e948c36bc5b8f6ceaff6f8cc1ddab2071d5e7264))
+
+
+### Features
+
+* add docker support ([#3](https://github.com/hstove/bsk-analytics/issues/3)) ([1351113](https://github.com/hstove/bsk-analytics/commit/1351113f2d63d5cb65b39ca1d49b312415860293))
+
+
+
+
+
 ## [0.2.1](https://github.com/hstove/bsk-analytics/compare/v0.2.0...v0.2.1) (2020-02-27)
 
 
