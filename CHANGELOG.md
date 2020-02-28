@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.3](https://github.com/blockstack/stats/compare/v0.5.2...v0.5.3) (2020-02-28)
+
+
+### Bug Fixes
+
+* only include basic location info in `page` ([4cb7d7f](https://github.com/blockstack/stats/commit/4cb7d7f85dee15ff33aceaacf76c97aa58cac5b9))
+
+
+
+
+
 ## [0.5.2](https://github.com/blockstack/stats/compare/v0.5.1...v0.5.2) (2020-02-28)
 
 **Note:** Version bump only for package root
