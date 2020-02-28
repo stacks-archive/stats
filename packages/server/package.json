@@ -2,7 +2,6 @@
   "name": "@blockstack/stats-server",
   "version": "0.4.0",
   "description": "A server for privacy-preserving analytics",
-  "author": "Hank Stoever <hstove@gmail.com>",
   "homepage": "",
   "license": "MIT",
   "main": "dist/server.js",

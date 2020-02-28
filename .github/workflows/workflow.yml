@@ -110,13 +110,14 @@ jobs:
     - name: Docker Login
       uses: azure/container-actions/docker-login@8efaf42
       with:
-        username: hstove
-        password: ${{ secrets.DOCKER_PW }}
+        loginServer: docker.pkg.github.com
+        username: $GITHUB_ACTOR
+        password: ${{ secrets.GITHUB_TOKEN }}
     - name: Build Docker image
       env:
         TAG: ${{ steps.git-tag.outputs.tag }}
-      run: docker build -t hstove/bsk-analytics:$TAG .
+      run: docker build -t docker.pkg.github.com/blockstack/stats/server:$TAG .
     - name: Upload docker image
       env:
         TAG: ${{ steps.git-tag.outputs.tag }}
-      run: docker push hstove/bsk-analytics:$TAG
+      run: docker push docker.pkg.github.com/blockstack/stats/server:$TAG
