@@ -20,7 +20,9 @@
     "dev:watch": "nodemon -e ts -x 'yarn dev'",
     "typecheck": "tsc --noEmit",
     "build": "tsc",
-    "prepublishOnly": "yarn build"
+    "prepublishOnly": "yarn build",
+    "prod": "NODE_ENV=production ts-node src/http.ts",
+    "version": "yarn"
   },
   "dependencies": {
     "@blockstack/analytics": "^0.2.1",
@@ -28,7 +30,8 @@
     "analytics-node": "^3.4.0-beta.1",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "tslib": "^1.11.0"
   },
   "devDependencies": {
     "@types/analytics-node": "^3.1.2",

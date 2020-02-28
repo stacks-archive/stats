@@ -64,8 +64,6 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v1
-      with:
-        ref: 'master'
     - name: Checkout master
       run: git checkout master
     - name: Set Node Version
@@ -87,7 +85,7 @@ jobs:
     - name: Git status
       run: git status
     - name: Install package deps
-      run: yarn lerna exec --parallel "yarn --frozen-lockfile"
+      run: yarn lerna exec --parallel "yarn"
     - name: Git status
       run: git status
     - name: Setup .npmrc
@@ -106,3 +104,19 @@ jobs:
       uses: ad-m/github-push-action@fe38f0a
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Get git tag
+      id: git-tag
+      run: echo "::set-output name=tag::$(git describe --tags `git rev-list --tags --max-count=1`)"
+    - name: Docker Login
+      uses: azure/container-actions/docker-login@8efaf42
+      with:
+        username: hstove
+        password: ${{ secrets.DOCKER_PW }}
+    - name: Build Docker image
+      env:
+        TAG: ${{ steps.git-tag.outputs.tag }}
+      run: docker build -t hstove/bsk-analytics:$TAG .
+    - name: Upload docker image
+      env:
+        TAG: ${{ steps.git-tag.outputs.tag }}
+      run: docker push hstove/bsk-analytics:$TAG
