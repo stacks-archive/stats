@@ -13,7 +13,8 @@ describe('event', () => {
     }
     expect(extra.method).toEqual('POST');
     const { id } = getConfig();
-    const body = JSON.parse(extra.body.toString());
+    const { context, ...body } = JSON.parse(extra.body.toString());
+    expect(context).toBeTruthy();
     expect(body).toEqual({
       eventData: {
         name: 'test',

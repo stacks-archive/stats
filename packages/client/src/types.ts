@@ -14,12 +14,23 @@ export interface ActionData {
   provider: Provider;
 }
 
+export interface Context {
+  page: {
+    hash: string;
+    path: string;
+    search: string;
+    title: string;
+    url: string;
+  };
+}
+
 export interface EventData {
   name: string;
   [key: string]: any;
 }
 
 export interface EventAction extends ActionData {
+  context: Context;
   eventData: EventData;
 }
 
@@ -32,6 +43,7 @@ export interface PageData {
 }
 
 export interface PageAction extends ActionData {
+  context: Context;
   pageData: PageData;
 }
 
@@ -40,10 +52,20 @@ export enum Actions {
   PAGE = 'page',
 }
 
-export interface RunOptions {
-  action: Actions;
-  pageData?: PageData;
-  eventData?: EventData;
-  providers: Provider[];
+interface BaseRunOptions {
   id: string;
+  context: Context;
+  providers: Provider[];
 }
+
+export interface PageRun extends BaseRunOptions {
+  action: typeof Actions.PAGE;
+  pageData: PageData;
+}
+
+export interface EventRun extends BaseRunOptions {
+  action: typeof Actions.EVENT;
+  eventData: EventData;
+}
+
+export type RunOptions = EventRun | PageRun;

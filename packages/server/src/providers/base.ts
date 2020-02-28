@@ -1,24 +1,29 @@
 import { EventAction, Actions, RunOptions, Provider, PageAction } from '@blockstack/stats';
 
 export class BaseProvider {
-  static async run({ action, pageData, eventData, id }: RunOptions, provider: Provider) {
-    if (action === Actions.EVENT) {
+  static async run(opts: RunOptions, provider: Provider) {
+    if (opts.action === Actions.EVENT) {
+      const { eventData } = opts;
       if (!eventData) {
         throw 'No data provided for event';
       }
       console.log(`${this.name}: sending event.`, eventData);
       return this.event({
+        context: opts.context,
         eventData,
-        id,
+        id: opts.id,
         provider,
       });
     }
+
+    const { pageData, id } = opts;
 
     if (!pageData) {
       throw 'No page data provided for page method';
     }
     console.log(`${this.name}: sending page.`, pageData);
     return this.page({
+      context: opts.context,
       pageData,
       id,
       provider,
