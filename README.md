@@ -114,7 +114,7 @@ The `page` method is used to track page visits.
 
 Call this method for every page load. Or, in a single-page-app, call this method whenever your app's screen changes.
 
-`@blockstack/stats` will automatically attach basic page data, like the `path` and `document.title`.
+`@blockstack/stats` will automatically attach basic page data, like the `origin` and `path`. Other aspects of the URL that are not tracked include the `search`, `hash`, and `document.title`, which often contain sensitive information.
 
 ```javascript
 page({

@@ -12,11 +12,9 @@ export const getContext = (): Context => {
   const { location } = document;
   return {
     page: {
-      title: document.title,
-      url: `${location}`,
       path: location.pathname,
-      hash: location.hash,
-      search: location.search,
+      origin: location.origin,
+      url: `${location.origin}/${location.pathname}`,
     },
   };
 };
