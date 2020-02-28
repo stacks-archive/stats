@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.1](https://github.com/blockstack/stats/compare/v0.5.0...v0.5.1) (2020-02-28)
+
+
+### Bug Fixes
+
+* move client to devDependencies in server ([b2361dd](https://github.com/blockstack/stats/commit/b2361ddcdf6367531ef485667cf94c534cec8783))
+
+
+
+
+
 # [0.5.0](https://github.com/blockstack/stats/compare/v0.4.0...v0.5.0) (2020-02-28)
 
 
