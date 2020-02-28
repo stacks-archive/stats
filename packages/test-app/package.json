@@ -3,7 +3,7 @@
   "version": "0.3.0",
   "private": true,
   "dependencies": {
-    "@blockstack/analytics": "file:../client",
+    "@blockstack/stats": "file:../client",
     "@blockstack/ui": "^1.0.0-alpha.35",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",

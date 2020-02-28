@@ -1,6 +1,6 @@
 import { BaseProvider } from './providers/base';
 import { SegmentProvider } from './providers/segment';
-import { RunOptions, Providers } from '@blockstack/analytics';
+import { RunOptions, Providers } from '@blockstack/stats';
 
 const nameToProvider = {
   [Providers.Segment]: SegmentProvider,

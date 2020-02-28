@@ -18,7 +18,7 @@
     "declaration": true,
     "baseUrl": "./",
     "paths": {
-      "@blockstack/analytics": ["../client/src"]
+      "@blockstack/stats": ["../client/src"]
     }
   }
 }

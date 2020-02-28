@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Flex } from '@blockstack/ui';
-import { event } from '@blockstack/analytics';
+import { event } from '@blockstack/stats';
 
 const App: React.FC = () => {
   return (

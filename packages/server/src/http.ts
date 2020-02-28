@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import express, { Request, Response } from 'express';
-import { RunOptions } from '@blockstack/analytics';
+import { RunOptions } from '@blockstack/stats';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import { exportToProviders } from './utils';

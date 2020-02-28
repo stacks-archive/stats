@@ -1,2 +1,2 @@
-# `@blockstack/analytics-server`
+# `@blockstack/stats-server`
 

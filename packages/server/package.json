@@ -1,5 +1,5 @@
 {
-  "name": "@blockstack/analytics-server",
+  "name": "@blockstack/stats-server",
   "version": "0.3.0",
   "description": "A server for privacy-preserving analytics",
   "author": "Hank Stoever <hstove@gmail.com>",
@@ -10,7 +10,7 @@
     "dist"
   ],
   "bin": {
-    "blockstack-analytics-server": "./dist/http.js"
+    "blockstack-stats-server": "./dist/http.js"
   },
   "publishConfig": {
     "access": "public"
@@ -24,7 +24,7 @@
     "prod": "NODE_ENV=production ts-node src/http.ts"
   },
   "dependencies": {
-    "@blockstack/analytics": "^0.3.0",
+    "@blockstack/stats": "^0.3.0",
     "@types/express": "^4.17.2",
     "analytics-node": "^3.4.0-beta.1",
     "body-parser": "^1.19.0",

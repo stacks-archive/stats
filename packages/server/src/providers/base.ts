@@ -1,4 +1,4 @@
-import { EventAction, Actions, RunOptions, Provider, PageAction } from '@blockstack/analytics';
+import { EventAction, Actions, RunOptions, Provider, PageAction } from '@blockstack/stats';
 
 export class BaseProvider {
   static async run({ action, pageData, eventData, id }: RunOptions, provider: Provider) {

@@ -1,15 +1,15 @@
-# Blockstack Analytics
+# Blockstack Stats
 
 **This project is in early days, and is a work in progress.**
 
-Blockstack Analytics is a client/server framework for convient, privacy-preserving analytics.
+Blockstack Stats is a client/server framework for convient, privacy-preserving analytics.
 
 <!-- TOC depthFrom:2 -->
 
 - [The Why](#the-why)
 - [The What](#the-what)
-  - [`@blockstack/analytics-server`](#blockstackanalytics-server)
-  - [`@blockstack/analytics`](#blockstackanalytics)
+  - [`@blockstack/stats-server`](#blockstackstats-server)
+  - [`@blockstack/stats`](#blockstackstats)
 - [Usage](#usage)
   - [Setup the server](#setup-the-server)
   - [Setup the client-side code.](#setup-the-client-side-code)
@@ -38,11 +38,11 @@ Our architecture is setup just like [Segment](https://segment.com/), except that
 
 This framework consists of two components:
 
-### `@blockstack/analytics-server`
+### `@blockstack/stats-server`
 
 The server component provides a simple API for collecting analytics. It follows the adapter pattern for passing data along to external services, so you can make a single API call, and pass through that data to whatever service you use.
 
-### `@blockstack/analytics`
+### `@blockstack/stats`
 
 Our client-side library is what you'll use in your web applications. It has a simple API, and works with modern Javascript, so you can use Typescript and import the library from NPM.
 
@@ -55,25 +55,25 @@ First, you'll need to get the server running.
 The simplest way to do this in development is by running:
 
 ```bash
-npx @blockstack/analytics-server blockstack-analytics-server
+npx @blockstack/stats-server blockstack-stats-server
 ```
 
 This will get the server running on port 5555.
 
 ### Setup the client-side code.
 
-In your web application, install the package `@blockstack/analytics` with `npm` or `yarn`.
+In your web application, install the package `@blockstack/stats` with `npm` or `yarn`.
 
 ```bash
-yarn add @blockstack/analytics
+yarn add @blockstack/stats
 # or
-npm install --save @blockstack/analytics
+npm install --save @blockstack/stats
 ```
 
 Then, in your application, call the `setConfig` method.
 
 ```javascript
-import { setConfig } from '@blockstack/analytics';
+import { setConfig } from '@blockstack/stats';
 
 setConfig({
   host: 'https://myserver.com', // where the server can be found. Defaults to http://localhost:5555
@@ -91,7 +91,7 @@ setConfig({
 The `event` and `page` methods can be used to pass data through your server.
 
 ```javascript
-import { event } from '@blockstack/analytics';
+import { event } from '@blockstack/stats';
 
 const eventName = 'clicked_login';
 event(eventName)
@@ -112,7 +112,7 @@ event('purchase', { product: 'Fuzzy Hat', price: '$10.00' });
 To use the "Segment" provider, you **must** include a `writeKey`.
 
 ```javascript
-import { setConfig } from '@blockstack/analytics';
+import { setConfig } from '@blockstack/stats';
 
 setConfig({
   providers: [

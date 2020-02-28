@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@blockstack/analytics@^0.2.1":
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/@blockstack/analytics/-/analytics-0.2.1.tgz#a1c0e987aee316c36822f7e06fbfe8f10889fba9"
-  integrity sha512-n5HK/ihANk/6NfGhVfp6KbD1QLBLZBSGUqxGtkJ0CMKSDKqlI7PIM/rf5OwPKV8ZC9sZCJTsKbFySNXtN/FsEA==
+"@blockstack/stats@^0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@blockstack/stats/-/stats-0.3.0.tgz#eaa55d312858c8f632dcb8277347d371d7265cb3"
+  integrity sha512-iYhcGJd0hS7gEcRMtlx6oCZJDmC9qcth/6VKPNwx+EatedkqS7p8uhIixPWWqdN9oWm1srFGtjthh3uULNfSGw==
 
 "@segment/loosely-validate-event@^2.0.0":
   version "2.0.0"

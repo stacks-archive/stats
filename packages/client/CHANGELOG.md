@@ -5,7 +5,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [0.3.0](https://github.com/hstove/bsk-analytics/compare/v0.2.1...v0.3.0) (2020-02-28)
 
-**Note:** Version bump only for package @blockstack/analytics
+**Note:** Version bump only for package @blockstack/stats
 
 
 

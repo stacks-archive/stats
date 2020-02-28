@@ -881,7 +881,7 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@blockstack/analytics@file:../client":
+"@blockstack/stats@file:../client":
   version "0.1.0"
 
 "@blockstack/ui@^1.0.0-alpha.35":
