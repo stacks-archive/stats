@@ -108,9 +108,9 @@ jobs:
       id: git-tag
       run: echo "::set-output name=tag::$(git describe --tags `git rev-list --tags --max-count=1`)"
     - name: Docker Login
-      uses: azure/container-actions/docker-login@8efaf42
+      uses: azure/docker-login@v1
       with:
-        loginServer: docker.pkg.github.com
+        login-server: docker.pkg.github.com
         username: $GITHUB_ACTOR
         password: ${{ secrets.GITHUB_TOKEN }}
     - name: Build Docker image
