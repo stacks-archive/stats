@@ -21,8 +21,7 @@
     "typecheck": "tsc --noEmit",
     "build": "tsc",
     "prepublishOnly": "yarn build",
-    "prod": "NODE_ENV=production ts-node src/http.ts",
-    "version": "yarn"
+    "prod": "NODE_ENV=production ts-node src/http.ts"
   },
   "dependencies": {
     "@blockstack/analytics": "^0.2.1",
