@@ -20,7 +20,8 @@
     "typecheck": "tsc --noEmit",
     "build": "tsc",
     "prepublishOnly": "yarn build",
-    "prod": "NODE_ENV=production ts-node src/http.ts"
+    "prod": "NODE_ENV=production ts-node src/http.ts",
+    "version": "yarn"
   },
   "dependencies": {
     "@blockstack/stats": "^0.4.0",

@@ -10,7 +10,7 @@
     "lint:eslint": "eslint --ext .ts,.tsx,.js . -f unix",
     "lint:fix": "eslint --ext .ts,.tsx,.js . -f unix --fix && prettier --write **/*.{ts,tsx} *.js",
     "lint:prettier": "prettier --check **/*.{ts,tsx} *.js",
-    "version": "yarn lerna exec --parallel \"yarn\""
+    "version": "lerna bootstrap"
   },
   "devDependencies": {
     "@blockstack/prettier-config": "^0.0.5",
