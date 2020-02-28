@@ -2,14 +2,15 @@
   "name": "@blockstack/stats-server",
   "version": "0.5.1",
   "description": "A server for privacy-preserving analytics",
-  "homepage": "",
   "license": "MIT",
-  "main": "dist/server.js",
+  "homepage": "https://github.com/blockstack/stats",
+  "repository": "blockstack/stats",
+  "main": "dist/server/http.js",
   "files": [
     "dist"
   ],
   "bin": {
-    "blockstack-stats-server": "./dist/http.js"
+    "blockstack-stats-server": "./dist/server/http.js"
   },
   "publishConfig": {
     "access": "public"

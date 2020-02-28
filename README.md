@@ -14,6 +14,7 @@ Blockstack Stats is a client/server framework for convient, privacy-preserving a
   - [Setup the server](#setup-the-server)
   - [Setup the client-side code.](#setup-the-client-side-code)
   - [Trigger events to be sent to analytics services](#trigger-events-to-be-sent-to-analytics-services)
+  - [Tracking pages](#tracking-pages)
 - [Providers](#providers)
   - [Segment](#segment)
 - [Development](#development)
@@ -88,17 +89,37 @@ setConfig({
 
 ### Trigger events to be sent to analytics services
 
-The `event` and `page` methods can be used to pass data through your server.
+The `event` method is used for event tracking.
 
 ```javascript
 import { event } from '@blockstack/stats';
 
 const eventName = 'clicked_login';
-event(eventName)
+event({
+  name: eventName,
+})
 
 // You can also pass any properties with events:
 
-event('purchase', { product: 'Fuzzy Hat', price: '$10.00' });
+event({
+  name: 'purchased',
+  product: 'Fuzzy Hat',
+  price: '$10.00',
+});
+```
+
+### Tracking pages
+
+The `page` method is used to track page visits.
+
+Call this method for every page load. Or, in a single-page-app, call this method whenever your app's screen changes.
+
+`@blockstack/stats` will automatically attach basic page data, like the `path` and `document.title`.
+
+```javascript
+page({
+  name: 'Home Page'
+})
 ```
 
 ## Providers

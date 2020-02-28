@@ -4,6 +4,8 @@
   "license": "MIT",
   "main": "dist/index.js",
   "description": "A client-side library for privacy-preserving analytics.",
+  "homepage": "https://github.com/blockstack/stats",
+  "repository": "blockstack/stats",
   "typings": "dist/client/src/index.d.ts",
   "files": [
     "dist"
