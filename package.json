@@ -6,10 +6,9 @@
     "typecheck": "lerna run typecheck --parallel --stream",
     "dev:watch": "lerna run dev:watch --parallel --stream",
     "build:client": "lerna run build --scope @blockstack/stats",
-    "lint": "yarn lint:eslint && yarn lint:prettier",
+    "lint": "yarn lint:eslint",
     "lint:eslint": "eslint --ext .ts,.tsx,.js . -f unix",
-    "lint:fix": "eslint --ext .ts,.tsx,.js . -f unix --fix && prettier --write **/*.{ts,tsx} *.js",
-    "lint:prettier": "prettier --check **/*.{ts,tsx} *.js",
+    "lint:fix": "eslint --ext .ts,.tsx,.js . -f unix --fix",
     "version": "lerna bootstrap"
   },
   "devDependencies": {
