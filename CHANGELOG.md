@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.4](https://github.com/blockstack/stats/compare/v0.5.3...v0.5.4) (2020-03-03)
+
+
+### Features
+
+* use docker hub for package registry ([261d426](https://github.com/blockstack/stats/commit/261d4268280d69090f5a2040783fbfa7e74fd75f))
+
+
+
+
+
 ## [0.5.3](https://github.com/blockstack/stats/compare/v0.5.2...v0.5.3) (2020-02-28)
 
 
