@@ -9,6 +9,7 @@
     "lint": "yarn lint:eslint",
     "lint:eslint": "eslint --ext .ts,.tsx,.js . -f unix",
     "lint:fix": "eslint --ext .ts,.tsx,.js . -f unix --fix",
+    "prod:server": "lerna run prod --scope @blockstack/stats-server --stream",
     "version": "lerna bootstrap"
   },
   "devDependencies": {
