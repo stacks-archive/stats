@@ -110,14 +110,13 @@ jobs:
     - name: Docker Login
       uses: azure/docker-login@v1
       with:
-        login-server: docker.pkg.github.com
-        username: $GITHUB_ACTOR
-        password: ${{ secrets.GITHUB_TOKEN }}
+        username: ${{ secrets.DOCKER_LOGIN }}
+        password: ${{ secrets.DOCKER_PW }}
     - name: Build Docker image
       env:
         TAG: ${{ steps.git-tag.outputs.tag }}
-      run: docker build -t docker.pkg.github.com/blockstack/stats/server:$TAG .
+      run: docker build -t blockstack/stats:$TAG .
     - name: Upload docker image
       env:
         TAG: ${{ steps.git-tag.outputs.tag }}
-      run: docker push docker.pkg.github.com/blockstack/stats/server:$TAG
+      run: docker push blockstack/stats:$TAG
