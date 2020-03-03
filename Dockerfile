@@ -9,4 +9,4 @@ RUN yarn lerna run build --scope @blockstack/stats-server
 
 ENV NODE_ENV="production"
 EXPOSE 5555
-CMD ["node", "./packages/server/dist/http.js"]
+CMD ["node", "./packages/server/dist/server/src/http.js"]
