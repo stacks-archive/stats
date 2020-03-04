@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.5](https://github.com/blockstack/stats/compare/v0.5.4...v0.5.5) (2020-03-04)
+
+
+### Bug Fixes
+
+* docker not using correct stats package ([6f609e0](https://github.com/blockstack/stats/commit/6f609e04b626a4f1c3f8f89d1b30d6fffc0525f7))
+
+
+
+
+
 ## [0.5.4](https://github.com/blockstack/stats/compare/v0.5.3...v0.5.4) (2020-03-03)
 
 **Note:** Version bump only for package @blockstack/stats-server

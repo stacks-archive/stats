@@ -1,6 +1,6 @@
 {
   "name": "@blockstack/stats-server",
-  "version": "0.5.4",
+  "version": "0.5.5",
   "description": "A server for privacy-preserving analytics",
   "license": "MIT",
   "homepage": "https://github.com/blockstack/stats",
