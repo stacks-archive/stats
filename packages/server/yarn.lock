@@ -2,8 +2,10 @@
 # yarn lockfile v1
 
 
-"@blockstack/stats@file:../client":
-  version "0.4.0"
+"@blockstack/stats@0.5.4":
+  version "0.5.4"
+  resolved "https://registry.yarnpkg.com/@blockstack/stats/-/stats-0.5.4.tgz#092ee64de324412688d227073f768907083cb6c4"
+  integrity sha512-tUHfEeXYF5QwVp3xZOPQzfH0Lr5GBc2tr/6M3/CH6GU/cHLRJ63cwiLpUj/3cnb+sYE+OYS00MtOfMsMUtVzug==
 
 "@segment/loosely-validate-event@^2.0.0":
   version "2.0.0"

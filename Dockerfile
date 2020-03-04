@@ -4,7 +4,8 @@ WORKDIR /usr/src/app
 COPY package.json yarn.lock /usr/src/app/
 RUN yarn
 COPY . /usr/src/app/
-RUN yarn lerna exec --scope @blockstack/stats-server "yarn"
+RUN yarn lerna bootstrap
+RUN yarn lerna run build
 
 ENV NODE_ENV="production"
 EXPOSE 5555

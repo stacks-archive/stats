@@ -3,7 +3,7 @@
   "version": "0.5.4",
   "private": true,
   "dependencies": {
-    "@blockstack/stats": "file:../client",
+    "@blockstack/stats": "0.5.4",
     "@blockstack/ui": "^1.0.0-alpha.35",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -21,7 +21,6 @@
   "scripts": {
     "start": "PORT=3333 react-scripts start",
     "dev:watch": "yarn start",
-    "build": "react-scripts build",
     "typecheck": "tsc --noEmit",
     "eject": "react-scripts eject"
   },

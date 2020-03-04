@@ -19,9 +19,6 @@
     "noEmit": true,
     "jsx": "react",
     "baseUrl": "./",
-    "paths": {
-      "@blockstack/stats": ["../client/src"]
-    }
   },
   "include": [
     "src"

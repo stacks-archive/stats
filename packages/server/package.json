@@ -21,7 +21,7 @@
     "typecheck": "tsc --noEmit",
     "build": "tsc",
     "prepublishOnly": "yarn build",
-    "prod": "NODE_ENV=production ts-node src/http.ts",
+    "prod": "NODE_ENV=production node dist/server/src/http.js",
     "version": "yarn"
   },
   "dependencies": {
@@ -33,7 +33,7 @@
     "tslib": "^1.11.0"
   },
   "devDependencies": {
-    "@blockstack/stats": "file:../client",
+    "@blockstack/stats": "0.5.4",
     "@types/analytics-node": "^3.1.2",
     "@types/cors": "^2.8.6",
     "@types/node": "^13.7.4",
