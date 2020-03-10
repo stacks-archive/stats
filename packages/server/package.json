@@ -21,8 +21,7 @@
     "typecheck": "tsc --noEmit",
     "build": "tsc",
     "prepublishOnly": "yarn build",
-    "prod": "NODE_ENV=production node dist/server/src/http.js",
-    "version": "yarn"
+    "prod": "NODE_ENV=production node dist/server/src/http.js"
   },
   "dependencies": {
     "@types/express": "^4.17.2",
