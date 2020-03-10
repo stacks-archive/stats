@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/blockstack/stats/compare/v0.5.5...v0.6.0) (2020-03-10)
+
+
+### Bug Fixes
+
+* update ui library ([e767203](https://github.com/blockstack/stats/commit/e767203590aef314f67d88c783781901e090365e))
+* use bootstrap for setting up CI ([35bf962](https://github.com/blockstack/stats/commit/35bf962e936aa4dbeec3204894e964f56c7c0311))
+* use yarn workspace ([c8094cf](https://github.com/blockstack/stats/commit/c8094cf978db2e535075f91d0216f140b723e2ae))
+
+
+
+
+
 ## [0.5.5](https://github.com/blockstack/stats/compare/v0.5.4...v0.5.5) (2020-03-04)
 
 

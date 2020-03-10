@@ -1,6 +1,6 @@
 {
   "name": "@blockstack/stats-server",
-  "version": "0.5.5",
+  "version": "0.6.0",
   "description": "A server for privacy-preserving analytics",
   "license": "MIT",
   "homepage": "https://github.com/blockstack/stats",
@@ -33,7 +33,7 @@
     "ua-parser-js": "^0.7.21"
   },
   "devDependencies": {
-    "@blockstack/stats": "0.5.4",
+    "@blockstack/stats": "^0.6.0",
     "@types/analytics-node": "^3.1.2",
     "@types/cors": "^2.8.6",
     "@types/node": "^13.7.4",

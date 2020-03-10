@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/blockstack/stats/compare/v0.5.5...v0.6.0) (2020-03-10)
+
+
+### Bug Fixes
+
+* use yarn workspace ([c8094cf](https://github.com/blockstack/stats/commit/c8094cf978db2e535075f91d0216f140b723e2ae))
+
+
+### Features
+
+* include basic user-agent info ([7c03c1b](https://github.com/blockstack/stats/commit/7c03c1b763f302d8322e5973238643f096fe140e))
+
+
+
+
+
 ## [0.5.5](https://github.com/blockstack/stats/compare/v0.5.4...v0.5.5) (2020-03-04)
 
 

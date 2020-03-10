@@ -1,6 +1,6 @@
 {
   "name": "@blockstack/stats",
-  "version": "0.5.4",
+  "version": "0.6.0",
   "license": "MIT",
   "main": "dist/index.js",
   "description": "A client-side library for privacy-preserving analytics.",

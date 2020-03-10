@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/blockstack/stats/compare/v0.5.5...v0.6.0) (2020-03-10)
+
+
+### Bug Fixes
+
+* removes double slash from context.path.url ([1953b28](https://github.com/blockstack/stats/commit/1953b289e07c2602b06913fe1f5a16e574a8af6c))
+* use yarn workspace ([c8094cf](https://github.com/blockstack/stats/commit/c8094cf978db2e535075f91d0216f140b723e2ae))
+
+
+
+
+
 ## [0.5.4](https://github.com/blockstack/stats/compare/v0.5.3...v0.5.4) (2020-03-03)
 
 **Note:** Version bump only for package @blockstack/stats
