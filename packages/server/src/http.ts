@@ -14,7 +14,7 @@ app.post('/api/event', async (req: Request, res: Response) => {
   const runOptions: RunOptions = req.body;
   console.log(runOptions);
   try {
-    await exportToProviders(runOptions);
+    await exportToProviders(runOptions, req);
   } catch (error) {
     console.log(error);
     return res.status(500).json({
