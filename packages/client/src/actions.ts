@@ -10,11 +10,16 @@ import {
 
 export const getContext = (): Context => {
   const { location } = document;
+  const { useHash } = getConfig();
+  const hash = useHash ? location.hash : undefined;
   return {
     page: {
       path: location.pathname,
+      hash,
       origin: location.origin,
-      url: `${location.origin}${location.pathname}`,
+      url: `${location.origin}${location.pathname}${
+        useHash ? location.hash : ''
+      }`,
     },
   };
 };

@@ -1,5 +1,5 @@
 import './setup';
-import { event, setConfig, getConfig } from '../src';
+import { event, setConfig, getConfig, getContext } from '../src';
 
 describe('event', () => {
   test('passes the right JSON to the server', async () => {
@@ -34,4 +34,18 @@ describe('event', () => {
     const [url] = fetchMock.mock.calls[0];
     expect(url).toEqual('https://analytics.example.com/api/event');
   });
+});
+
+test('supports useHash', () => {
+  setConfig({
+    useHash: true,
+  });
+  location.hash = 'asdf';
+  const context = getContext();
+  expect(context.page.hash).toEqual('#asdf');
+  expect(context.page.url.endsWith('#asdf')).toEqual(true);
+  setConfig({
+    useHash: false,
+  });
+  expect(getContext().page.hash).toBeFalsy();
 });

@@ -17,6 +17,7 @@ export interface ActionData {
 export interface Context {
   page: {
     path: string;
+    hash?: string;
     origin: string;
     url: string;
   };

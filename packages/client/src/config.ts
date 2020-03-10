@@ -3,6 +3,7 @@ import { Provider } from './types';
 interface PartialConfig {
   host: string;
   providers: Provider[];
+  useHash: boolean;
 }
 
 interface Config extends PartialConfig {
@@ -12,6 +13,7 @@ interface Config extends PartialConfig {
 export const defaultConfig: PartialConfig = {
   host: 'http://localhost:5555',
   providers: [],
+  useHash: false,
 };
 
 // thanks https://gist.github.com/6174/6062387
