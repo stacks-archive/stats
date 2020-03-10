@@ -24,7 +24,7 @@ jobs:
     - name: Install monorepo deps
       run: yarn
     - name: Install package deps
-      run: yarn lerna exec --parallel "yarn --frozen-lockfile"
+      run: yarn lerna bootstrap
     - name: Run Tests
       run: yarn lerna run test
 
@@ -51,7 +51,7 @@ jobs:
     - name: Monorepo Dependencies
       run: yarn --frozen-lockfile
     - name: Install package deps
-      run: yarn lerna exec --parallel "yarn --frozen-lockfile"
+      run: yarn lerna bootstrap
     - name: Lint
       run: yarn lint
     - name: Typecheck
@@ -85,7 +85,7 @@ jobs:
     - name: Git status
       run: git status
     - name: Install package deps
-      run: yarn lerna exec --parallel "yarn"
+      run: yarn lerna bootstrap
     - name: Git status
       run: git status
     - name: Setup .npmrc
