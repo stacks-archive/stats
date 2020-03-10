@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/blockstack/stats/compare/v0.6.0...v0.7.0) (2020-03-10)
+
+
+### Features
+
+* support hash if specified ([9ff2705](https://github.com/blockstack/stats/commit/9ff27051ae6bc52701960360f8deb3c2ace6f3dd))
+
+
+
+
+
 # [0.6.0](https://github.com/blockstack/stats/compare/v0.5.5...v0.6.0) (2020-03-10)
 
 
