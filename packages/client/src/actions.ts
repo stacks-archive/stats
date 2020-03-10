@@ -14,7 +14,7 @@ export const getContext = (): Context => {
     page: {
       path: location.pathname,
       origin: location.origin,
-      url: `${location.origin}/${location.pathname}`,
+      url: `${location.origin}${location.pathname}`,
     },
   };
 };
