@@ -11,15 +11,26 @@ To get started:
 ### Use Docker
 
 1. build the image
+
+```sh
+  yarn build:docker
+```
+
 2. launch the container
+
+```sh
+  docker run --publish 5555:5555 --detach --name stats s:1.0
+```
 
 ### Use custom server
 
 Configure your node server, clone and run:
 
 ```sh
-  $ yarn
-  $ yarn prod:server
+  yarn
+  yarn bootstrap
+  yarn build
+  yarn start:server
 ```
 
 ---
